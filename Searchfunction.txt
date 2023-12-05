@@ -1,0 +1,40 @@
+public static int[] searchForCustomer(String field, String value) {
+        int index;
+        int foundIndexes[] = new int[0];          
+        if(field.equalsIgnoreCase("ID") == true) {
+                for(index = 0; index < CustomerList.size(); index++) {
+                    CMS.CustomerInfo currentCustomer = CustomerList.get(index);
+                    String currentID = currentCustomer.getID();
+                    if(currentID.equalsIgnoreCase(value)) {
+                    foundIndexes = ChangeList(foundIndexes, index);}
+                }
+            } else if(field.equalsIgnoreCase("FirstName") == true) {
+                for(index = 0; index < CustomerList.size(); index++) {
+                    CMS.CustomerInfo currentCustomer = CustomerList.get(index);
+                    String currentID = currentCustomer.getFirstName();
+                    if(currentID.equalsIgnoreCase(value)) {
+                    foundIndexes = ChangeList(foundIndexes, index);}
+                }
+            } else if(field.equalsIgnoreCase("LastName") == true) {
+                for(index = 0; index < CustomerList.size(); index++) {
+                    CMS.CustomerInfo currentCustomer = CustomerList.get(index);
+                    String currentID = currentCustomer.getLastName();
+                    if(currentID.equalsIgnoreCase(value)) {
+                    foundIndexes = ChangeList(foundIndexes, index);}
+                }
+            } else if(field.equalsIgnoreCase("Address") == true) {
+                for(index = 0; index < CustomerList.size(); index++) {
+                    CMS.CustomerInfo currentCustomer = CustomerList.get(index);
+                    String currentID = currentCustomer.getAddress();
+                    if(currentID.equalsIgnoreCase(value)) {
+                    foundIndexes = ChangeList(foundIndexes, index); }
+                }
+            } else if(field.equalsIgnoreCase("Email") == true) {
+                for(index = 0; index < CustomerList.size(); index++) {
+                    CMS.CustomerInfo currentCustomer = CustomerList.get(index);
+                    String currentID = currentCustomer.getEmail();
+                    if(currentID.equalsIgnoreCase(value)) {
+                    foundIndexes = ChangeList(foundIndexes, index);}
+                }
+            } else {System.out.println("searchForCustomer");}
+        return(foundIndexes);}
